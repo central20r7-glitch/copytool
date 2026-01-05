@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Banco de Imagens - Informática</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-images"></i>
+                <span>Loja<strong>Copiar</strong></span>
+            </div>
+            
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Filtrar suas imagens...">
+            </div>
+
+            <button class="btn-upload" onclick="triggerUpload()">
+                <i class="fas fa-plus"></i> Adicionar Imagem
+            </button>
+            <input type="file" id="fileInput" hidden accept="image/*" multiple>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="ranking-section">
+            <h2><i class="fas fa-trophy"></i> MAIS COPIADAS</h2>
+            <div id="topRanking" class="grid-ranking">
+                </div>
+        </section>
+
+        <section class="gallery-section">
+            <h2><i class="fas fa-archive"></i> TODAS AS IMAGENS</h2>
+            <div id="mainGallery" class="grid-gallery"></div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast">✅ Copiado para o chat!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
